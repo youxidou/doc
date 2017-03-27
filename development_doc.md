@@ -1,5 +1,10 @@
 # 游戏兜接入开发指南
 
+
+### SDK下载
+
+- [php](https://github.com/youxidou/game-php-sdk)
+
 ### 功能接口
 - 登陆
 - 支付
