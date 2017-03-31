@@ -5,6 +5,11 @@
 
 - [php](https://github.com/youxidou/game-php-sdk)
 
+
+### 接入SDK demo
+
+- [php-demo](https://github.com/youxidou/game-php-demo)
+
 ### 功能接口
 - 登陆
 - 支付
@@ -15,6 +20,13 @@
 - 充值同步跳转地址
 - 充值异步跳转地址
 
+### 接口域名地址
+
+- 现在正在测试阶段，暂时测试域名地址为如下：
+
+```
+https://gg.yxd17.com/api
+```
 
 ### 签名算法
 
@@ -102,7 +114,7 @@ $signature = signData($data, "app_secret");
 - 请求地址:
 
 ```
-GET http://api.yxd17.com/user/getUserInfo
+GET /user/getUserInfo
 ```
 
 - 参数说明:
@@ -209,7 +221,7 @@ YXD.pay(pay_data, callback)
 - 接口：
 
 ```
-POST http://www.yxd17.com/pay/unified/order
+POST /pay/unified/order
 ```
 
 - 参数说明
