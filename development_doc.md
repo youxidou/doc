@@ -132,9 +132,10 @@ GET /user/getUserInfo
 ```
 http code = 200
 {
-	"open_id":"aaa33dd32dd2dadd",  //这里返回的open_id是最长64位的字符创
+	"open_id":"aaa33dd32dd2dadd",  //用户对游戏唯一id
 	"avatar": "http://www.avatar.com/avatar.jpg", //始终是http格式
-	"nickname": "魔界大神"
+	"nickname": "魔界大神",
+	"union_id":"aaaadddddaaaaaadadad" //用户对开发商唯一id
 }
 ```
 
@@ -164,7 +165,7 @@ http code = 400
 ##### JS SDK接口发起支付
 
 - 步聚:
-  - 引入游戏兜JSSDK `//d.yxd17.com/loadsdk`;（注意：不需要添加http，以便自适应http和https协议）
+  - 引入游戏兜JSSDK `https://gg.yxd17.com/js/sdk.js`;（注意：不需要添加http，以便自适应http和https协议）
   - 由游戏服务器生成购买订单，并调用YXD.pay方法，发起订单
   - 用户通过游戏中心完成付费
   - `游戏中心`回调游戏提供的notify_url，通知游戏付费成功
