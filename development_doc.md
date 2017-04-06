@@ -22,10 +22,9 @@
 
 ### 接口域名地址
 
-- 现在正在测试阶段，暂时测试域名地址为如下：
 
 ```
-https://gg.yxd17.com/api
+http://game.yxd17.com/api
 ```
 
 ### 签名算法
@@ -165,7 +164,7 @@ http code = 400
 ##### JS SDK接口发起支付
 
 - 步聚:
-  - 引入游戏兜JSSDK `https://gg.yxd17.com/js/sdk.js`;（注意：不需要添加http，以便自适应http和https协议）
+  - 引入游戏兜JSSDK `//game.yxd17.com/js/sdk.js`;（注意：不需要添加http，以便自适应http和https协议）
   - 由游戏服务器生成购买订单，并调用YXD.pay方法，发起订单
   - 用户通过游戏中心完成付费
   - `游戏中心`回调游戏提供的notify_url，通知游戏付费成功
