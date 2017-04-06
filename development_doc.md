@@ -243,7 +243,7 @@ POST /pay/unified/order
 
 | 参数 | 必填  | 描述 |
 | -----| :---| :---------|
-| return_code | 是 | SUCCESS/FAIL  此字段是通信标识，非交易标识，交易是否成功需要查看result_code来判断  |
+| result_code | 是 | SUCCESS/FAIL  此字段是通信标识，非交易标识，交易是否成功需要查看result_code来判断  |
 | app_key | 是 | 这里是游戏中心提供的app key |
 | prepay_id | 是 | 预支付交易会话标识 |
 | timestamp | 是 | 当前时间戳 |
@@ -262,7 +262,7 @@ POST /pay/unified/order
 
 | 参数 | 描述 |
 | -----|  :---------|
-| return_code | SUCCESS/FAIL  此字段是通信标识，非交易标识，交易是否成功需要查看result_code来判断  |
+| result_code | SUCCESS/FAIL  此字段是通信标识，非交易标识，交易是否成功需要查看result_code来判断  |
 | app_key | 这里是游戏中心提供的app key |
 | open_id | 用户id |
 | notify_time | 通知时间 |
