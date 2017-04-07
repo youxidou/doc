@@ -268,6 +268,7 @@ POST /pay/unified/order
 | notify_time | 通知时间 |
 | notify_id | 通知id |
 | money | 道具支付金额（单位元），精确到小数点后两位 |
+| trade_no | 游戏兜的交易订单号 |
 | game_order_no | 游戏生成的订单号 |
 | timestamp | 当前时间戳 |
 | nonce |  随机字符串 |
