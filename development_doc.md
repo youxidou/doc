@@ -46,10 +46,10 @@ sha1(签名字符串+app_secret)
 
 ```php
 //签名方法
-function signData($data, $secret)
+function signData1($data, $secret)
 {
     ksort($data);
-    $str = json_decode(http_build_query($data). $secret);
+    $str = urldecode(http_build_query($data)). $secret;
 
     return sha1($str);
 }
@@ -255,7 +255,7 @@ POST /pay/unified/order
 - 说明:
   - 采用`POST`方式调用商家的充值异步通知地址(notify_url)
   - 目前只有在支付成功的情况下才会异步回调商家！
-  - 商家接到异步通知并且验签无误后，完成商家的业务逻辑(发货等)之后，成功返回纯字符串“OK”，否则返回其他。
+  - 商家接到异步通知并且验签无误后，完成商家的业务逻辑(发货等)之后，成功返回纯字符串“SUCCESS”，否则返回其他。
   - 返回其他时，游戏中心会认为商家接收失败，会一直重复发支付成功通知，在交易完成的第（0min, 2min, 10min, 20min, 1hour, 2hour, 6hour, 15hour, 24hour)时段发起请求，直至收到成功标志或者超时。
 
 - 回调返回参数值:
