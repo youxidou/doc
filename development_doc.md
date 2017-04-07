@@ -46,7 +46,7 @@ sha1(签名字符串+app_secret)
 
 ```php
 //签名方法
-function signData1($data, $secret)
+function signData($data, $secret)
 {
     ksort($data);
     $str = urldecode(http_build_query($data)). $secret;
@@ -258,7 +258,7 @@ POST /pay/unified/order
   - 商家接到异步通知并且验签无误后，完成商家的业务逻辑(发货等)之后，成功返回纯字符串“SUCCESS”，否则返回其他。
   - 返回其他时，游戏中心会认为商家接收失败，会一直重复发支付成功通知，在交易完成的第（0min, 2min, 10min, 20min, 1hour, 2hour, 6hour, 15hour, 24hour)时段发起请求，直至收到成功标志或者超时。
 
-- 回调返回参数值:
+- 回调返回参数值: `返回所有值都需要参与签名`，可以通过`$_POST`来获取返回值
 
 | 参数 | 描述 |
 | -----|  :---------|
@@ -268,6 +268,8 @@ POST /pay/unified/order
 | notify_time | 通知时间 |
 | notify_id | 通知id |
 | money | 道具支付金额（单位元），精确到小数点后两位 |
+| title | 订单标题 |
+| description | 订单描述 |
 | trade_no | 游戏兜的交易订单号 |
 | game_order_no | 游戏生成的订单号 |
 | timestamp | 当前时间戳 |
