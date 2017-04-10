@@ -234,6 +234,7 @@ POST /pay/unified/order
 | game_order_no | 是 | 游戏生成的订单号 |
 | title | 是 | 游戏道具名称 |
 | description | 否 | 游戏道具描述 |
+| attach | 否 | （长度：255字符）附加数据，在支付通知中原样返回，可作为自定义参数使用。|
 | notify_url | 是 |  支付完成后异步通知URL |
 | timestamp | 是 | 当前时间戳 |
 | nonce | 是 |  随机字符串 |
@@ -270,6 +271,7 @@ POST /pay/unified/order
 | money | 道具支付金额（单位元），精确到小数点后两位 |
 | title | 订单标题 |
 | description | 订单描述 |
+| attach |（不是必须，长度：255字符） 商家数据包，原样返回，如果创建预付订单时填写该值，则通知时，该值原样返回 |
 | trade_no | 游戏兜的交易订单号 |
 | game_order_no | 游戏生成的订单号 |
 | timestamp | 当前时间戳 |
