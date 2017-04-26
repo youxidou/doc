@@ -46,11 +46,11 @@ sha1(签名字符串+app_secret)
 
 ```php
 //签名方法
-function signData($data, $secret)
+function signData1($data, $secret)
 {
     ksort($data);
     $str = urldecode(http_build_query($data)). $secret;
-
+echo $str;
     return sha1($str);
 }
 
@@ -182,7 +182,7 @@ YXD.pay(pay_data, callback)
 | app_key | 这里是游戏中心提供的app key |
 | prepay_id | 统一下单接口返回的prepay_id参数值 |
 | timestamp | 当前时间戳 |
-| nonce |  随机字符串 |
+| nonce |  随机字符串（需要自己生成，每次请求必须保证唯一） |
 | signature |  签名 |
 
 - 示例:
@@ -237,7 +237,7 @@ POST /pay/unified/order
 | attach | 否 | （长度：255字符）附加数据，在支付通知中原样返回，可作为自定义参数使用。|
 | notify_url | 是 |  支付完成后异步通知URL |
 | timestamp | 是 | 当前时间戳 |
-| nonce | 是 |  随机字符串 |
+| nonce | 是 |  随机字符串（需要自己生成，每次请求必须保证唯一） |
 | signature | 是 |  签名 |
 
 - 返回结果
