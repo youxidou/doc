@@ -46,11 +46,11 @@ sha1(签名字符串+app_secret)
 
 ```php
 //签名方法
-function signData1($data, $secret)
+function signData($data, $secret)
 {
     ksort($data);
     $str = urldecode(http_build_query($data)). $secret;
-echo $str;
+
     return sha1($str);
 }
 
