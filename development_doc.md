@@ -34,9 +34,14 @@ http://game.yxd17.com/api
     - 不要urlencode的原始数据;
     - 加密值采用signature作为参数字段传递;
 
-```
-sha1(签名字符串+app_secret)
-```
+- 签名字符串：
+	```
+	key1=value1&key2=value2
+	```
+- SHA1加密
+	```
+	sha1(签名字符串+app_secret)
+	```
 
 - 算法:
   - 在请求参数列表中,除去`signature`参数外，其他需要使用到的参数皆是要签名的参数;
