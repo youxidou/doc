@@ -143,6 +143,15 @@ http code = 200
 }
 ```
 
+- open_id 与 union_id 区别
+
+```
+如果你有多个游戏放在我们平台，对用户来说，union_id 是用户id是唯一的
+如果你有游戏A，B ; 返回值如下：
+游戏A：open_id=A1，union_id=1
+游戏B：open_id=B1，union_id=1
+```
+
 - 错误返回格式:
 
 ```
