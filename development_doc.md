@@ -127,7 +127,7 @@ GET /user/getUserInfo
 | -----| :---| :---------|
 | app_key | 是 | 这里是游戏中心提供的app key |
 | timestamp | 是 | 当前时间戳 |
-| nonce | 是 |  随机字符串 |
+| nonce | 是 |  随机字符串（需要自己生成，每次请求必须保证唯一） |
 | token | 是 | 登陆标识 |
 | signature | 是 |  签名 |
 
