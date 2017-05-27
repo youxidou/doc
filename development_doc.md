@@ -138,7 +138,7 @@ http code = 200
 {
 	"open_id":"aaa33dd32dd2dadd",  //用户对游戏唯一id
 	"avatar": "http://www.avatar.com/avatar.jpg", //始终是http格式
-	"nickname": "魔界大神",
+	"name": "魔界大神",
 	"union_id":"aaaadddddaaaaaadadad" //用户对开发商唯一id
 }
 ```
