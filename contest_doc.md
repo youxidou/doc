@@ -12,6 +12,7 @@
 | name | 是 | 用户昵称 |
 | avatar | 是 | 头像url |
 | open_id | 是 | 用户和游戏关联的唯一ID |
+| uid | 否 | 趣头条用户ID(如果不是趣头条用户则为null) |
 
 ## 示例:
 > http://game.yxd17.com/api/contest/user?token=bb9289a46f05d14043ca013468e48ec79882b73598e9363f508c16bf58a58a10
