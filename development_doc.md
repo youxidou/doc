@@ -171,6 +171,49 @@ http code = 400
 | 2002 | 禁止用户登录 |
 | 2003 | 游戏已下架 |
 
+### 分享
+
+- 用途:在游戏中调起平台分享;
+
+##### JS SDK接口调用分享
+
+- 步聚:
+  - 引入游戏兜JSSDK `//game.yxd17.com/js/sdk.js`;（注意：不需要添加http，以便自适应http和https协议）
+  - 调用YXD.share方法，调起平台分享
+  - 用户在平台分享后, 通过回调函数通知游戏
+
+- share接口
+
+```
+YXD.share(callback)
+```
+
+- 示例:
+
+```
+ <script language="javascript">
+    YXD.share(function (result)
+    {
+        // result结构如下
+        result.code
+    });
+ </script>
+```
+
+- result字段说明:
+
+| 参数 | 必填  | 描述 |
+| -----| :---| :---------|
+| code | 是 | 错误码 |
+
+
+- 错误码: 
+
+| 值 | 描述 |
+| -----| :---------|
+| -1 | 用户取消 |
+| 0 | 完成分享 |
+| >0 | 其他错误 |
 
 ### 支付
 
